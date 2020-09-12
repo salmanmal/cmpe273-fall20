@@ -1,26 +1,36 @@
-from flask import Flask, request
+from flask import Flask, request, send_file, request
 import flask_monitoringdashboard as dashboard
 from sqlitedict import SqliteDict
 import random
 import string
-
+import qrcode # using pillow in the background
+from io import BytesIO
 
 app = Flask(__name__)
 dashboard.bind(app)
 
 sqlite_db_path='./bookmark_db.sqlite'
 
-# using SqliteDict as context manager works too (RECOMMENDED)
-
+# Generate Random number for new bookmarks for Id
 def get_random_alpha_numeric(length=10):
     letters = string.ascii_lowercase
     letters+="0123456789"
     result_str = ''.join(random.choice(letters) for i in range(length))
     return result_str
 
+# Genereate QR code for bookmark url
+def get_qrcode(data):
+    img = qrcode.make(data)
+    output = BytesIO()
+    img.save(output, "PNG")
+    output.seek(0)
+    return output
+
+
 stats={}
 stats_key_name="stats"
 
+# Fetch Stats from DB on Server restart
 with SqliteDict(sqlite_db_path) as bookmarkDict:
     if stats_key_name in bookmarkDict:
         stats=bookmarkDict[stats_key_name]
@@ -29,9 +39,10 @@ with SqliteDict(sqlite_db_path) as bookmarkDict:
         bookmarkDict.commit()
 
 print(stats)
+
 @app.route('/')
-def hello():
-    return "Hello world"
+def ping():
+    return "Server is up!"
 
 @app.route('/api/bookmarks',methods=['POST'])
 def createBookmark():
@@ -68,8 +79,6 @@ def createBookmark():
 
     return response,http_status
 
-    
-
 @app.route('/api/bookmarks/<Id>',methods=['GET'])
 def getBookmark(Id):
     response={}
@@ -86,7 +95,7 @@ def getBookmark(Id):
 
             # commit changes (AUTO Commit is false )
             bookmarkDict.commit()
-            
+
             http_status=200
         else :
             response={"success":False,"message":f"Bookmark with {Id} not found in system!"}
@@ -114,3 +123,26 @@ def deleteBookmark(Id):
             http_status=404
 
     return response,http_status
+
+@app.route('/api/bookmarks/<Id>/qrcode',methods=['GET'])
+def getQRCode(Id):
+    response={}
+    http_status=500
+    with SqliteDict(sqlite_db_path) as bookmarkDict:
+        if Id in bookmarkDict:
+            # get bookmark url from dictionary
+            url=bookmarkDict[Id]["url"]
+
+            # generate qrcode for url
+            qrcode=get_qrcode(url)
+            response=send_file(qrcode,mimetype='image/png')
+            http_status=200
+        else :
+            response={"success":False,"message":f"Bookmark with {Id} not found in system!"}
+            http_status=404
+
+    return response,http_status
+
+# @app.route('/api/bookmarks/<Id>/stats',methods=['GET'])
+# def getBookmarkStats(Id):
+
