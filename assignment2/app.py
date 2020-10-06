@@ -10,7 +10,6 @@ my_dict={}
 
 
 def send_http_request(method,url):
-    data={"hllo":"hello"}
     response = requests.request(method,url)
     return response
 
@@ -122,12 +121,14 @@ def execute_step(id, input_data):
 
 def job():
     for i in my_dict["Scheduler"]["step_id_to_execute"]:
-                execute_step(i,"")
+        execute_step(i,"")
 
 def start():
     if "Scheduler" in my_dict:
         if "when" in my_dict["Scheduler"] and  "step_id_to_execute" in my_dict["Scheduler"] and len(my_dict["Scheduler"]["step_id_to_execute"])>0:
+
             cron_schedule=my_dict["Scheduler"]["when"].split(" ")
+
             if cron_schedule[1]==cron_schedule[2]=="*":
                 if cron_schedule[0]=="*":
                     schedule.every().minute.do(job)
@@ -136,6 +137,7 @@ def start():
             else :
                 weekday=cron_schedule[2]
                 minute=cron_schedule[0]
+
                 if minute=="*":
                     minute="00"
                 elif int(minute)<10:
@@ -148,6 +150,7 @@ def start():
                     hour="0"+hour
                 
                 schedule_time=hour+":"+minute
+
                 print(schedule_time)
                 if weekday=="*":
                     schedule.every().day.at(schedule_time).do(job)
@@ -180,65 +183,3 @@ def main(argv):
 
 if __name__ == "__main__":
     main(sys.argv[1:])
-
-
-
-
-
-
-
-
-
-# 1
-# SELECT cus.NAME, ord.PRICE FROM CUSTOMERS cus
-# INNER JOIN ORDERS ord ON ord.ID = cus.ORDER_ID
-# WHERE ord.ORDER_DATE <= (SELECT DATEADD(year,10,MIN(ORDER_DATE)) FROM ORDERS)
-#  AND ord.PRICE = (
-#                 SELECT MAX(PRICE) FROM ORDER 
-#                 WHERE ORDER_DATE <= (SELECT DATEADD(year,10,MIN(ORDER_DATE)) FROM ORDERS)
-#                 )
-
-
-# 2
-# SELECT ISNULL(cus.customer_name,'N/A')
-# , ISNULL(prd.product_name,'N/A')
-# , ISNULL(item.quantity,0) from customer cus
-# LEFT JOIN invoice inv on inv.customer_id = cus.id
-# LEFT JOIN invoice_item item on item.invoice_id = inv.id
-# FULL OUTER JOIN product prd on prd.id = item.product_id
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def job():
-#     print("I'm working...")
-
-# if "Scheduler" in my_dict:
-#     when=my_dict["Scheduler"]["when"].split(" ")
-#     # if not "?" in when[0]:
-#     #     if not "*" in when[0]:
-#     schedule.every()["wednesday"].at()
-#         # else:
-            
-            
-    
-    
-
-
-
-# schedule.every().minute.at(":17").do(job)
-
-# while True:
-#     schedule.run_pending()
-#     time.sleep(1)
