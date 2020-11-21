@@ -34,7 +34,7 @@ def generate_data_consistent_hashing(servers):
     producers = create_clients(servers)
     ch=ConsistentHashing(servers)
     count=[0,0,0,0]
-    for num in range(0,10000):
+    for num in range(0,100):
         data = { 'key': f'key-{num}', 'value': f'value-{num}' }
         node = ch.select_node(data["key"])
         count[node]+=1
@@ -68,7 +68,7 @@ if __name__ == "__main__":
         servers.append(f'tcp://127.0.0.1:{server_port}')
         
     print("Servers:", servers)
-    generate_data_round_robin(servers)
+    # generate_data_round_robin(servers)
     generate_data_consistent_hashing(servers)
-    generate_data_hrw_hashing(servers)
+    # generate_data_hrw_hashing(servers)
     
