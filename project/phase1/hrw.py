@@ -16,4 +16,3 @@ def select_node(key,servers):
             max_weight = weight
             selected_node = i
     return selected_node
-# https://github.com/srinivasap/consistent_n_hrw_hashing_py
