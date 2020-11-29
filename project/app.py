@@ -10,6 +10,8 @@ import zmq
 app = Flask(__name__)
 dashboard.bind(app)
 
+servers=[]
+
 def create_clients(servers):
     producers = {}
     context = zmq.Context()
@@ -32,6 +34,13 @@ def get_random_alpha_numeric(length=10):
         if result_str in bookmarkDict:
             return get_random_alpha_numeric()
     return result_str
+
+
+context = zmq.Context()
+consumer_response = context.socket(zmq.PULL)
+consumer_response.bind("tcp://127.0.0.1:4000")
+producers = create_clients(servers)
+ch=ConsistentHashing(servers)
 
 @app.route('/')
 def ping():

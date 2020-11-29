@@ -15,13 +15,21 @@ def create_clients(servers):
 
 def generate_data_consistent_hashing(servers):
     print("Starting...")
-    ## TODO
     context = zmq.Context()
     consumer_response = context.socket(zmq.PULL)
     consumer_response.bind("tcp://127.0.0.1:4000")
     producers = create_clients(servers)
     ch=ConsistentHashing(servers)
-    requests=[{"op": "PUT","key": "key1","value": "value1"},{"op": "PUT","key": "key2","value": "value2"},{"op": "PUT","key": "key3","value": "value3"},{"op": "PUT","key": "key4","value": "value4"},{"op": "GET_ONE","key": "key1"}, {"op": "GET_ALL"},{"op":"REMOVE_NODE","server":"tcp://127.0.0.1:2000"}, {"op":"ADD_NODE","server":"tcp://127.0.0.1:2002"},{"op": "GET_ALL"}]
+    requests=[
+        {"op": "PUT","key": "key1","value": "value1"},
+        {"op": "PUT","key": "key2","value": "value2"},
+        {"op": "PUT","key": "key3","value": "value3"},
+        {"op": "PUT","key": "key4","value": "value4"},
+        {"op": "GET_ONE","key": "key1"},
+        {"op": "GET_ALL"},
+        {"op":"REMOVE_NODE","server":"tcp://127.0.0.1:2000"},
+        {"op":"ADD_NODE","server":"tcp://127.0.0.1:2002"},
+        {"op": "GET_ALL"}]
 
     for i in range(len(requests)):
         curr_req=requests[i]
@@ -54,6 +62,7 @@ def generate_data_consistent_hashing(servers):
             servers.remove(curr_req["server"])
             ch.update_servers(servers)
             collection=response["collection"]
+
             for i in range(len(collection)):
                 node = ch.select_node_for_put(collection[i]["key"])
                 collection[i]["op"]="PUT"
@@ -65,11 +74,14 @@ def generate_data_consistent_hashing(servers):
             print("distribution before adding the node:")
             print(ch.getDistribution())
             all_result=[]
+            
             for server in servers:
                 producers[server].send_json({"op":"GET_ALL"})
                 response= consumer_response.recv_json()
                 all_result.extend(response["collection"])
+            
             servers.append(curr_req["server"])
+
             context = zmq.Context()
             producer_conn = context.socket(zmq.PUSH)
             producer_conn.bind(curr_req["server"])
