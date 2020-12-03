@@ -10,7 +10,6 @@ def server(port):
     while True:
         raw = consumer.recv_json()
         key, value = raw['key'], raw['value']
-        
         print(f"Server_port={port}:key={key},value={value}")
         # FIXME: Implement to store the key-value data.
         data[key]=value

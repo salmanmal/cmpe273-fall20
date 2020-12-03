@@ -9,3 +9,4 @@ verify_ssl = true
 pyzmq = "==19.0.2"
 flask = "*"
 flask-monitoringdashboard = "*"
+python-consul = "*"
