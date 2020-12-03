@@ -8,6 +8,15 @@ from cluster_manager import ClusterManger
 def generate_data_consistent_hashing(servers):
     cm=ClusterManger()
     _=input("enter")
+
+    # Iterate over to put the keys
+    for i in range(5,20000):
+        request={"op":"PUT","key":f"key-{i}","value":f"value-{i}"}
+        cm.put(request)
+
+
+
+    # Process following requests one by one
     requests=[
         {"op": "PUT","key": "key1","value": "value1"},
         {"op": "PUT","key": "key2","value": "value2"},
@@ -17,11 +26,8 @@ def generate_data_consistent_hashing(servers):
         {"op": "GET_DISTRIBUTION"},
         {"op":"REMOVE_NODE"},
         {"op":"ADD_NODE"},
+        {"op": "GET_ONE","key": "key1"},
         ]
-
-    for i in range(5,20000):
-        request={"op":"PUT","key":f"key-{i}","value":f"value-{i}"}
-        cm.put(request)
 
     for i in range(len(requests)):
         curr_req=requests[i]

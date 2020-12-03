@@ -68,7 +68,7 @@ def server(service_name,port):
             # Request to get all the data
             response=get_all_data_formatted(data)
             client.send_json(response)
-            print(f"Return all data{response}")
+            print(f"Returned all data")
 
         elif raw['op']=="GET_ALL_AND_CLEAR":
             # Request to get all the data and reset the data
@@ -76,7 +76,7 @@ def server(service_name,port):
             response=get_all_data_formatted(data)
             client.send_json(response)
             data={}
-            print(f"Return all data{response}")
+            print(f"Returned all data")
         
 
 
