@@ -69,6 +69,6 @@ if __name__ == "__main__":
         
     print("Servers:", servers)
     # generate_data_round_robin(servers)
-    generate_data_consistent_hashing(servers)
-    # generate_data_hrw_hashing(servers)
+    # generate_data_consistent_hashing(servers)
+    generate_data_hrw_hashing(servers)
     

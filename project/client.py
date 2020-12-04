@@ -65,12 +65,3 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         servers = sys.argv[1:]
     generate_data_consistent_hashing(servers)
-    # if len(servers)>0:
-        
-    #     generate_data_consistent_hashing(servers)
-    # else:
-    #     print("please provide intial server list")
-    pass
-
-
-# python client.py tcp://127.0.0.1:2000 tcp://127.0.0.1:2001 tcp://127.0.0.1:2002
