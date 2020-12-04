@@ -6,11 +6,16 @@ from cluster_manager import ClusterManger
 
 
 def generate_data_consistent_hashing(servers):
+
+    # In Cluster manager we can change the distribution algorithm
+    # Consistent Hashing
+    # HRW Hashing
     cm=ClusterManger()
+
     _=input("enter")
 
     # Iterate over to put the keys
-    for i in range(5,100):
+    for i in range(5,50000):
         request={"op":"PUT","key":f"key-{i}","value":f"value-{i}"}
         cm.put(request)
 

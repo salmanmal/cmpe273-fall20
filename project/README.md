@@ -1,4 +1,10 @@
 # Class Project
+### Distribution of data at different state in consistent hashing
+<img src="consistent-hashing-distribution.png" alt="consistent Algorithm Distribution" />
+
+### Distribution of data at different state in HRW hashing
+<img src="hrw-hashing-distribution.png" alt="HRW Algorithm Distribution" />
+
 
 You will be buliding a distributed key-value datastore using ZeroMQ as transport protocol.
 
@@ -139,5 +145,5 @@ _Steps to add node_
 - Launch a new server process based on the node information given by Consul.
 - Re-balance existing data to the new node.
 
-### Distribution of data at different state in consistent hashing
-<img src="consistent-hashing-distribution.png" alt="consistent Algorithm Distribution" />
+
+
