@@ -139,3 +139,5 @@ _Steps to add node_
 - Launch a new server process based on the node information given by Consul.
 - Re-balance existing data to the new node.
 
+### Distribution of data at different state in consistent hashing
+<img src="consistent-hashing-distribution.png" alt="consistent Algorithm Distribution" />

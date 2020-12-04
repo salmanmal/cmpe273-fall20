@@ -1,0 +1,59 @@
+Registered :: Service datanode#2003 registered
+Starting a server at:2003...
+=========================================================
+{}
+Returned all data for rebalancing
+=========================================================
+Saved Data Server_port=2003:key=key-33,value=value-33
+=========================================================
+Saved Data Server_port=2003:key=key-44,value=value-44
+=========================================================
+Saved Data Server_port=2003:key=key-69,value=value-69
+=========================================================
+Saved Data Server_port=2003:key=key-89,value=value-89
+=========================================================
+Saved Data Server_port=2003:key=key-96,value=value-96
+=========================================================
+Saved Data Server_port=2003:key=key-98,value=value-98
+=========================================================
+Saved Data Server_port=2003:key=key-2,value=value-2
+=========================================================
+Saved Data Server_port=2003:key=key-19,value=value-19
+=========================================================
+Saved Data Server_port=2003:key=key-64,value=value-64
+=========================================================
+Saved Data Server_port=2003:key=key-84,value=value-84
+=========================================================
+Saved Data Server_port=2003:key=key-85,value=value-85
+=========================================================
+Saved Data Server_port=2003:key=key-87,value=value-87
+=========================================================
+Saved Data Server_port=2003:key=key-99,value=value-99
+=========================================================
+Saved Data Server_port=2003:key=key-3,value=value-3
+=========================================================
+Saved Data Server_port=2003:key=key-17,value=value-17
+=========================================================
+Saved Data Server_port=2003:key=key-28,value=value-28
+=========================================================
+Saved Data Server_port=2003:key=key-39,value=value-39
+=========================================================
+Saved Data Server_port=2003:key=key-49,value=value-49
+=========================================================
+Saved Data Server_port=2003:key=key-57,value=value-57
+=========================================================
+Saved Data Server_port=2003:key=key-78,value=value-78
+=========================================================
+Saved Data Server_port=2003:key=key-88,value=value-88
+=========================================================
+Saved Data Server_port=2003:key=key-12,value=value-12
+=========================================================
+Saved Data Server_port=2003:key=key-23,value=value-23
+=========================================================
+Saved Data Server_port=2003:key=key-41,value=value-41
+=========================================================
+Saved Data Server_port=2003:key=key-70,value=value-70
+=========================================================
+Saved Data Server_port=2003:key=key-74,value=value-74
+
+Deregistered :: Service datanode#2003 deregistered

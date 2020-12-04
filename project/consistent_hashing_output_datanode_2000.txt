@@ -1,0 +1,65 @@
+Registered :: Service datanode#2000 registered
+Starting a server at:2000...
+=========================================================
+Saved Data Server_port=2000:key=key-8,value=value-8
+=========================================================
+Saved Data Server_port=2000:key=key-14,value=value-14
+=========================================================
+Saved Data Server_port=2000:key=key-20,value=value-20
+=========================================================
+Saved Data Server_port=2000:key=key-23,value=value-23
+=========================================================
+Saved Data Server_port=2000:key=key-24,value=value-24
+=========================================================
+Saved Data Server_port=2000:key=key-25,value=value-25
+=========================================================
+Saved Data Server_port=2000:key=key-33,value=value-33
+=========================================================
+Saved Data Server_port=2000:key=key-39,value=value-39
+=========================================================
+Saved Data Server_port=2000:key=key-41,value=value-41
+=========================================================
+Saved Data Server_port=2000:key=key-44,value=value-44
+=========================================================
+Saved Data Server_port=2000:key=key-49,value=value-49
+=========================================================
+Saved Data Server_port=2000:key=key-52,value=value-52
+=========================================================
+Saved Data Server_port=2000:key=key-54,value=value-54
+=========================================================
+Saved Data Server_port=2000:key=key-61,value=value-61
+=========================================================
+Saved Data Server_port=2000:key=key-65,value=value-65
+=========================================================
+Saved Data Server_port=2000:key=key-66,value=value-66
+=========================================================
+Saved Data Server_port=2000:key=key-70,value=value-70
+=========================================================
+Saved Data Server_port=2000:key=key-73,value=value-73
+=========================================================
+Saved Data Server_port=2000:key=key-74,value=value-74
+=========================================================
+Saved Data Server_port=2000:key=key-75,value=value-75
+=========================================================
+Saved Data Server_port=2000:key=key-77,value=value-77
+=========================================================
+Saved Data Server_port=2000:key=key-78,value=value-78
+=========================================================
+Saved Data Server_port=2000:key=key-79,value=value-79
+=========================================================
+Saved Data Server_port=2000:key=key-82,value=value-82
+=========================================================
+Saved Data Server_port=2000:key=key-84,value=value-84
+=========================================================
+Saved Data Server_port=2000:key=key-93,value=value-93
+=========================================================
+Saved Data Server_port=2000:key=key-97,value=value-97
+=========================================================
+Saved Data Server_port=2000:key=key-98,value=value-98
+=========================================================
+Saved Data Server_port=2000:key=key-2,value=value-2
+=========================================================
+{'key-8': 'value-8', 'key-14': 'value-14', 'key-20': 'value-20', 'key-23': 'value-23', 'key-24': 'value-24', 'key-25': 'value-25', 'key-33': 'value-33', 'key-39': 'value-39', 'key-41': 'value-41', 'key-44': 'value-44', 'key-49': 'value-49', 'key-52': 'value-52', 'key-54': 'value-54', 'key-61': 'value-61', 'key-65': 'value-65', 'key-66': 'value-66', 'key-70': 'value-70', 'key-73': 'value-73', 'key-74': 'value-74', 'key-75': 'value-75', 'key-77': 'value-77', 'key-78': 'value-78', 'key-79': 'value-79', 'key-82': 'value-82', 'key-84': 'value-84', 'key-93': 'value-93', 'key-97': 'value-97', 'key-98': 'value-98', 'key-2': 'value-2'}
+Returned all data for rebalancing
+
+Deregistered :: Service datanode#2000 deregistered

@@ -8,6 +8,7 @@ def my_hash(key):
 
 class ConsistentHashing:
     def __init__(self,servers=None):
+        print("Consistent Hashing Initialised")
         self.splits=40
         self.servers=servers
         self.distribution=[]

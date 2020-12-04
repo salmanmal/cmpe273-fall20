@@ -10,7 +10,7 @@ def generate_data_consistent_hashing(servers):
     _=input("enter")
 
     # Iterate over to put the keys
-    for i in range(5,20000):
+    for i in range(5,100):
         request={"op":"PUT","key":f"key-{i}","value":f"value-{i}"}
         cm.put(request)
 
@@ -18,15 +18,15 @@ def generate_data_consistent_hashing(servers):
 
     # Process following requests one by one
     requests=[
-        {"op": "PUT","key": "key1","value": "value1"},
-        {"op": "PUT","key": "key2","value": "value2"},
-        {"op": "PUT","key": "key3","value": "value3"},
-        {"op": "PUT","key": "key4","value": "value4"},
-        {"op": "GET_ONE","key": "key1"},
+        {"op": "PUT","key": "key-1","value": "value-1"},
+        {"op": "PUT","key": "key-2","value": "value-2"},
+        {"op": "PUT","key": "key-3","value": "value-3"},
+        {"op": "PUT","key": "key-4","value": "value-4"},
+        {"op": "GET_ONE","key": "key-1"},
         {"op": "GET_DISTRIBUTION"},
         {"op":"REMOVE_NODE"},
         {"op":"ADD_NODE"},
-        {"op": "GET_ONE","key": "key1"},
+        {"op": "GET_ONE","key": "key-1"},
         ]
 
     for i in range(len(requests)):

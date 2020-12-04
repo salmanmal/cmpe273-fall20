@@ -1,0 +1,4 @@
+Registered :: Service datanode#2001 registered
+Starting a server at:2001...
+
+Deregistered :: Service datanode#2001 deregistered

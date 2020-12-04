@@ -63,7 +63,7 @@ def server(service_name,port):
             else:
                 response["error"]=f"key = {k} is not in database"
             client.send_json(response)
-            print(f"Return key and Data Server_port={port}:key={k},value={data[k]}")
+            print(f"Return key and Data Server_port={port}:key={k}")
         elif raw['op']=="GET_ALL":
             # Request to get all the data
             response=get_all_data_formatted(data)
@@ -76,7 +76,7 @@ def server(service_name,port):
             response=get_all_data_formatted(data)
             client.send_json(response)
             data={}
-            print(f"Returned all data")
+            print(f"Returned all data for rebalancing")
         
 
 

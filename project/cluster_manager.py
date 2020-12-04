@@ -1,6 +1,7 @@
 import consul
 import zmq
 from consistent_hashing import ConsistentHashing
+from hrw import HRW
 import random
 
 class ClusterManger:
@@ -12,7 +13,13 @@ class ClusterManger:
         self.consumer_response = context.socket(zmq.PULL)
         self.consumer_response.bind(self.message_channel)
         self.create_clients()
-        self.ch=ConsistentHashing(self.servers)
+
+        # For Consistent Hashing
+        # self.ch=ConsistentHashing(self.servers)
+
+        # For HRW
+        self.ch=HRW(self.servers)
+
 
     def get_server_list_from_services(self):
         services=self.consul_obj.agent.services()
@@ -71,9 +78,11 @@ class ClusterManger:
 
     def remove_node(self,server):
         # remove node passed in function argument
-        print("distribution before removing the node:")
+        print("=>distribution before removing the node:")
         print(self.ch.getDistribution())
         
+
+        print(f"=>removed Node {server}")
         # Fetch all the data to redistribute before removig node
         self.producers[server].send_json({"op":"GET_ALL_AND_CLEAR"})
         response=self.consumer_response.recv_json()
@@ -89,11 +98,11 @@ class ClusterManger:
             collection[i]["op"]="PUT"
             self.producers[self.servers[node]].send_json(collection[i])  
         
-        print("distribution after the rebalancing:")
+        print("=>distribution after the rebalancing:")
         print(self.ch.getDistribution())
 
     def add_node(self):
-        print("distribution before adding the node:")
+        print("=> distribution before adding the node:")
         print(self.ch.getDistribution())
         
         current_set=set(self.servers)
@@ -103,6 +112,7 @@ class ClusterManger:
         new_servers=[]
         for ser in membership_list:
             if not ser in current_set:
+                print(f"=> New node {ser} found!")
                 new_servers.append(ser)
                 
         
@@ -118,12 +128,13 @@ class ClusterManger:
             response= self.consumer_response.recv_json()
             all_result.extend(response["collection"])
         
+        print(f"=> rebalancing the data!")
         for i in range(len(all_result)):
             node = self.ch.select_node_for_put(all_result[i]["key"])
             all_result[i]["op"]="PUT"
             self.producers[self.servers[node]].send_json(all_result[i])  
 
-        print("distribution after the rebalancing:")
+        print("=> distribution after the rebalancing:")
         print(self.ch.getDistribution())
     
     def get_all(self):

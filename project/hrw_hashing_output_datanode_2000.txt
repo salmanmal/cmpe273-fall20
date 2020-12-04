@@ -1,0 +1,171 @@
+Registered :: Service datanode#2000 registered
+Starting a server at:2000...
+=========================================================
+Saved Data Server_port=2000:key=key-7,value=value-7
+=========================================================
+Saved Data Server_port=2000:key=key-8,value=value-8
+=========================================================
+Saved Data Server_port=2000:key=key-9,value=value-9
+=========================================================
+Saved Data Server_port=2000:key=key-10,value=value-10
+=========================================================
+Saved Data Server_port=2000:key=key-16,value=value-16
+=========================================================
+Saved Data Server_port=2000:key=key-17,value=value-17
+=========================================================
+Saved Data Server_port=2000:key=key-18,value=value-18
+=========================================================
+Saved Data Server_port=2000:key=key-20,value=value-20
+=========================================================
+Saved Data Server_port=2000:key=key-22,value=value-22
+=========================================================
+Saved Data Server_port=2000:key=key-28,value=value-28
+=========================================================
+Saved Data Server_port=2000:key=key-30,value=value-30
+=========================================================
+Saved Data Server_port=2000:key=key-34,value=value-34
+=========================================================
+Saved Data Server_port=2000:key=key-39,value=value-39
+=========================================================
+Saved Data Server_port=2000:key=key-47,value=value-47
+=========================================================
+Saved Data Server_port=2000:key=key-48,value=value-48
+=========================================================
+Saved Data Server_port=2000:key=key-49,value=value-49
+=========================================================
+Saved Data Server_port=2000:key=key-52,value=value-52
+=========================================================
+Saved Data Server_port=2000:key=key-54,value=value-54
+=========================================================
+Saved Data Server_port=2000:key=key-57,value=value-57
+=========================================================
+Saved Data Server_port=2000:key=key-59,value=value-59
+=========================================================
+Saved Data Server_port=2000:key=key-61,value=value-61
+=========================================================
+Saved Data Server_port=2000:key=key-62,value=value-62
+=========================================================
+Saved Data Server_port=2000:key=key-63,value=value-63
+=========================================================
+Saved Data Server_port=2000:key=key-65,value=value-65
+=========================================================
+Saved Data Server_port=2000:key=key-68,value=value-68
+=========================================================
+Saved Data Server_port=2000:key=key-71,value=value-71
+=========================================================
+Saved Data Server_port=2000:key=key-72,value=value-72
+=========================================================
+Saved Data Server_port=2000:key=key-76,value=value-76
+=========================================================
+Saved Data Server_port=2000:key=key-78,value=value-78
+=========================================================
+Saved Data Server_port=2000:key=key-79,value=value-79
+=========================================================
+Saved Data Server_port=2000:key=key-82,value=value-82
+=========================================================
+Saved Data Server_port=2000:key=key-83,value=value-83
+=========================================================
+Saved Data Server_port=2000:key=key-88,value=value-88
+=========================================================
+Saved Data Server_port=2000:key=key-90,value=value-90
+=========================================================
+Saved Data Server_port=2000:key=key-91,value=value-91
+=========================================================
+Saved Data Server_port=2000:key=key-94,value=value-94
+=========================================================
+Saved Data Server_port=2000:key=key-95,value=value-95
+=========================================================
+Saved Data Server_port=2000:key=key-6,value=value-6
+=========================================================
+Saved Data Server_port=2000:key=key-11,value=value-11
+=========================================================
+Saved Data Server_port=2000:key=key-12,value=value-12
+=========================================================
+Saved Data Server_port=2000:key=key-14,value=value-14
+=========================================================
+Saved Data Server_port=2000:key=key-21,value=value-21
+=========================================================
+Saved Data Server_port=2000:key=key-23,value=value-23
+=========================================================
+Saved Data Server_port=2000:key=key-25,value=value-25
+=========================================================
+Saved Data Server_port=2000:key=key-32,value=value-32
+=========================================================
+Saved Data Server_port=2000:key=key-40,value=value-40
+=========================================================
+Saved Data Server_port=2000:key=key-41,value=value-41
+=========================================================
+Saved Data Server_port=2000:key=key-42,value=value-42
+=========================================================
+Saved Data Server_port=2000:key=key-70,value=value-70
+=========================================================
+Saved Data Server_port=2000:key=key-73,value=value-73
+=========================================================
+Saved Data Server_port=2000:key=key-74,value=value-74
+=========================================================
+Saved Data Server_port=2000:key=key-77,value=value-77
+=========================================================
+Saved Data Server_port=2000:key=key-92,value=value-92
+=========================================================
+Saved Data Server_port=2000:key=key-93,value=value-93
+=========================================================
+Saved Data Server_port=2000:key=key-4,value=value-4
+=========================================================
+{'key-7': 'value-7', 'key-8': 'value-8', 'key-9': 'value-9', 'key-10': 'value-10', 'key-16': 'value-16', 'key-17': 'value-17', 'key-18': 'value-18', 'key-20': 'value-20', 'key-22': 'value-22', 'key-28': 'value-28', 'key-30': 'value-30', 'key-34': 'value-34', 'key-39': 'value-39', 'key-47': 'value-47', 'key-48': 'value-48', 'key-49': 'value-49', 'key-52': 'value-52', 'key-54': 'value-54', 'key-57': 'value-57', 'key-59': 'value-59', 'key-61': 'value-61', 'key-62': 'value-62', 'key-63': 'value-63', 'key-65': 'value-65', 'key-68': 'value-68', 'key-71': 'value-71', 'key-72': 'value-72', 'key-76': 'value-76', 'key-78': 'value-78', 'key-79': 'value-79', 'key-82': 'value-82', 'key-83': 'value-83', 'key-88': 'value-88', 'key-90': 'value-90', 'key-91': 'value-91', 'key-94': 'value-94', 'key-95': 'value-95', 'key-6': 'value-6', 'key-11': 'value-11', 'key-12': 'value-12', 'key-14': 'value-14', 'key-21': 'value-21', 'key-23': 'value-23', 'key-25': 'value-25', 'key-32': 'value-32', 'key-40': 'value-40', 'key-41': 'value-41', 'key-42': 'value-42', 'key-70': 'value-70', 'key-73': 'value-73', 'key-74': 'value-74', 'key-77': 'value-77', 'key-92': 'value-92', 'key-93': 'value-93', 'key-4': 'value-4'}
+Returned all data for rebalancing
+=========================================================
+Saved Data Server_port=2000:key=key-7,value=value-7
+=========================================================
+Saved Data Server_port=2000:key=key-8,value=value-8
+=========================================================
+Saved Data Server_port=2000:key=key-9,value=value-9
+=========================================================
+Saved Data Server_port=2000:key=key-10,value=value-10
+=========================================================
+Saved Data Server_port=2000:key=key-18,value=value-18
+=========================================================
+Saved Data Server_port=2000:key=key-20,value=value-20
+=========================================================
+Saved Data Server_port=2000:key=key-22,value=value-22
+=========================================================
+Saved Data Server_port=2000:key=key-34,value=value-34
+=========================================================
+Saved Data Server_port=2000:key=key-47,value=value-47
+=========================================================
+Saved Data Server_port=2000:key=key-48,value=value-48
+=========================================================
+Saved Data Server_port=2000:key=key-54,value=value-54
+=========================================================
+Saved Data Server_port=2000:key=key-63,value=value-63
+=========================================================
+Saved Data Server_port=2000:key=key-65,value=value-65
+=========================================================
+Saved Data Server_port=2000:key=key-68,value=value-68
+=========================================================
+Saved Data Server_port=2000:key=key-71,value=value-71
+=========================================================
+Saved Data Server_port=2000:key=key-76,value=value-76
+=========================================================
+Saved Data Server_port=2000:key=key-79,value=value-79
+=========================================================
+Saved Data Server_port=2000:key=key-82,value=value-82
+=========================================================
+Saved Data Server_port=2000:key=key-83,value=value-83
+=========================================================
+Saved Data Server_port=2000:key=key-90,value=value-90
+=========================================================
+Saved Data Server_port=2000:key=key-91,value=value-91
+=========================================================
+Saved Data Server_port=2000:key=key-94,value=value-94
+=========================================================
+Saved Data Server_port=2000:key=key-95,value=value-95
+=========================================================
+Saved Data Server_port=2000:key=key-6,value=value-6
+=========================================================
+Saved Data Server_port=2000:key=key-32,value=value-32
+=========================================================
+Saved Data Server_port=2000:key=key-42,value=value-42
+=========================================================
+Saved Data Server_port=2000:key=key-93,value=value-93
+
+Deregistered :: Service datanode#2000 deregistered

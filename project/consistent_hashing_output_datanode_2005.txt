@@ -1,0 +1,38 @@
+Registered :: Service datanode#2005 registered
+Starting a server at:2005...
+=========================================================
+Saved Data Server_port=2005:key=key-7,value=value-7
+=========================================================
+Saved Data Server_port=2005:key=key-13,value=value-13
+=========================================================
+Saved Data Server_port=2005:key=key-22,value=value-22
+=========================================================
+Saved Data Server_port=2005:key=key-38,value=value-38
+=========================================================
+Saved Data Server_port=2005:key=key-64,value=value-64
+=========================================================
+Saved Data Server_port=2005:key=key-92,value=value-92
+=========================================================
+Saved Data Server_port=2005:key=key-41,value=value-41
+=========================================================
+Saved Data Server_port=2005:key=key-84,value=value-84
+=========================================================
+Saved Data Server_port=2005:key=key-15,value=value-15
+=========================================================
+Saved Data Server_port=2005:key=key-32,value=value-32
+=========================================================
+Saved Data Server_port=2005:key=key-43,value=value-43
+=========================================================
+Saved Data Server_port=2005:key=key-62,value=value-62
+=========================================================
+Saved Data Server_port=2005:key=key-23,value=value-23
+=========================================================
+Saved Data Server_port=2005:key=key-49,value=value-49
+=========================================================
+Saved Data Server_port=2005:key=key-73,value=value-73
+=========================================================
+Saved Data Server_port=2005:key=key-75,value=value-75
+=========================================================
+Saved Data Server_port=2005:key=key-77,value=value-77
+
+Deregistered :: Service datanode#2005 deregistered
