@@ -1,6 +1,11 @@
 # Class Project
 
 ### [Code Demo Video on Youtube](https://youtu.be/6SdYI-DC-CE)
+
+## Instruction
+* For changing the distribution algorithm initialise the algorithm class instance in [cluster_manager.py](cluster_manager.py) in ClusterManger's constructor.
+
+
 ### Distribution of data at different state in consistent hashing
 <img src="consistent-hashing-distribution.png" alt="consistent Algorithm Distribution" />
 
