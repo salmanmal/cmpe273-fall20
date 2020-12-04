@@ -15,10 +15,10 @@ class ClusterManger:
         self.create_clients()
 
         # For Consistent Hashing
-        # self.ch=ConsistentHashing(self.servers)
+        self.ch=ConsistentHashing(self.servers)
 
         # For HRW
-        self.ch=HRW(self.servers)
+        # self.ch=HRW(self.servers)
 
 
     def get_server_list_from_services(self):
